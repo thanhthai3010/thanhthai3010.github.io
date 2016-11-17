@@ -19,13 +19,18 @@
 	
 	var data = [1, 2, 3, 45, 453, 3465, 5345345];
 	
+	var count = 0;
 	setInterval(function(){
-		
-	for(var i = 0; i < data.length; i++){
-		
-	$('#text').append('<p>'+data[i]+'</p>');
-	}
-	
+		count++;
+		for(var i = 0; i < data.length; i++){
+			if(count == 4000){
+				$('#text').append('<p>'+data[i]+'</p>');
+			}
+		}
+			
 	}, 4000);
+	
+	
+	
 	</script>
 </html>
