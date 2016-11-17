@@ -6,7 +6,24 @@
 <body>
 
 <h1>This is a Heading</h1>
+	<h1 id="text"></h1>
 <p>This is a paragraph.</p>
 
 </body>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
+<script>
+	
+	var data = [1, 2, 3, 45, 453, 3465, 5345345];
+	
+	setInterval(function(){
+		
+	for(var i in data){
+		
+	$('#text').text(data[i]);
+	}
+	
+	}, 2000);
+	</script>
 </html>
