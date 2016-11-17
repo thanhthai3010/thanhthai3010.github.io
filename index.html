@@ -17,20 +17,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
 <script>
 	
-	var data = [1, 2, 3, 45, 453, 3465, 5345345];
-	
-	var count = 0;
-	setInterval(function(){
-		count++;
-		for(var i = 0; i < data.length; i++){
-			if(count == 4000){
-				$('#text').append('<p>'+data[i]+'</p>');
-			}
-		}
-			
-	}, 4000);
-	
-	
-	
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("text").innerHTML = d.toLocaleTimeString();
+}
 	</script>
 </html>
