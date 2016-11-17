@@ -185,11 +185,17 @@
 
 setInterval(function(){
 
+	 
 	$.getJSON('https://graph.facebook.com/v2.8/?ids=348172715542267&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=EAAJbNXsfn4MBANxXAEJxho5LvrGYmZAHnne6WTZAcuPTyjaFi6JYfZAcdcqkiFr4gHsJbo88JjDjftBFJO49lwjKmKaDk3yLlLHaRp7yb3aeEwdGytRr8ZBalT1ETRfliq2I2ZBLZBQzeX8IX1jIF1Sc55BDB6l6eeobGv96yBywZDZD',function(res){
 		
-		th.text(0 + res['348172715542267'].reactions_love.summary.total_count);
+		var love = res['348172715542267'].reactions_love.summary.total_count;
+		tc = tc + love;
+		var like = res['348172715542267'].reactions_like.summary.total_count;
+		hc = hc + like;
+		
+		th.text(tc);
 
-		hh.text(0 + res['348172715542267'].reactions_like.summary.total_count);
+		hh.text(hc);
 
 		setInterval(function(){
 
