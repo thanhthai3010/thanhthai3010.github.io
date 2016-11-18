@@ -190,8 +190,13 @@
 	// trump();
 
 	// hilary();
+var myVar = setInterval(myTimer, 1000);
 
-setInterval(function(){
+function myTimer() {
+    var d = new Date();
+    document.getElementByClass("ch").innerHTML = d.toLocaleTimeString();
+}
+/*setInterval(function(){
 
 	var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
 	
@@ -216,7 +221,7 @@ setInterval(function(){
 
 		console.log(res);
 	});
-}, 10000);
+}, 10000);*/
 </script>
 
 </body>
