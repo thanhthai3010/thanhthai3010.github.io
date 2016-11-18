@@ -195,11 +195,12 @@ setInterval(function(){
 
 	var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
 	
-	$.getJSON('https://graph.facebook.com/v2.8/?ids=329585500734322_348250502201155&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
+	var postId = '329585500734322_348250502201155';
+	$.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
 		
-		th.text(0 + res['{329585500734322_348250502201155}'].reactions_love.summary.total_count);
+		th.text(0 + res[postId].reactions_love.summary.total_count);
 
-		hh.text(0 + res['{329585500734322_348250502201155}'].reactions_like.summary.total_count);
+		hh.text(0 + res[postId].reactions_like.summary.total_count);
 
 		setInterval(function(){
 
