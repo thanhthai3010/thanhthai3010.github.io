@@ -58,13 +58,13 @@
 			height: 350px;
 			margin: 0 auto;
 		}
-		.hilary, .trump{
+		.black_friday, .cyber_monday{
 			display: inline-block;
 			width: 45%;
 			//background: url(blur.png) top left no-repeat;
 			padding: 15px 0;
 		}
-		.trump{
+		.cyber_monday{
 			margin-left: 9%;
 		}
 		.meta img{
@@ -80,7 +80,7 @@
 			display: block;
 			width: 100%;
 		}	
-		.ct, .ch{
+		.cyber_vote_number, .black_vote_number{
 			width: 100%;
 			display: block;
 			color: #fff;
@@ -111,24 +111,23 @@
 				<h1>Black Friday or Cyber Monday<br> When Should You Shop?</h1>
 			</div>
 			<div>
-				<div class="hilary">
+				<div class="black_friday">
 					<div class="avatar">
 						<img src="black.jpg" alt="">
 					</div>
 					<div class="meta">
 						<img src="like.gif" alt="" class="icon">
-						<div class="ch">0</div>
-						<p id="demo"></p>
+						<div class="black_vote_number">0</div>
 						<div class="v">VOTES</div>
 					</div>
 				</div>
-				<div class="trump">
+				<div class="cyber_monday">
 					<div class="avatar">
 						<img src="cyber.jpg" alt="">
 					</div>
 					<div class="meta">
 						<img src="love.gif" alt="" class="icon">
-						<div class="ct">0</div>
+						<div class="cyber_vote_number">0</div>
 						<div class="v">VOTES</div>
 					</div>
 				</div>
@@ -146,15 +145,15 @@
 
 		hc = 30,
 
-		th = $('.ct'),
+		th = $('.cyber_vote_number'),
 
-		hh = $('.ch');
+		hh = $('.black_vote_number');
 
 	var hint,
 
 		tint;
 
-	function hilary(){
+	function black_friday(){
 
 		hint = setInterval(function(){
 
@@ -166,12 +165,12 @@
 
 			clearInterval(hint);
 
-			hilary();
+			black_friday();
 
 		}, _.random(1, 15) * 1000);
 	}
 
-	function trump(){
+	function cyber_monday(){
 
 		tint = setInterval(function(){
 
@@ -183,25 +182,20 @@
 
 			clearInterval(tint);
 
-			trump();
+			cyber_monday();
 
 		}, _.random(1, 15) * 1000);
 	}	
 
-	// trump();
+	// cyber_monday();
 
-	// hilary();
-var myVar = setInterval(myTimer, 1000);
+	// black_friday();
 
-function myTimer() {
-    var d = new Date();
-    document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-}
-/*setInterval(function(){
+setInterval(function(){
 
 	var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
 	
-	var postId = '329585500734322_348250502201155';
+	var postId = '329585500734322_333078433718362';
 	$.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
 		
 		th.text(0 + res[postId].reactions_love.summary.total_count);
@@ -222,7 +216,7 @@ function myTimer() {
 
 		console.log(res);
 	});
-}, 10000);*/
+}, 10000);
 </script>
 
 </body>
