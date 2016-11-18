@@ -145,9 +145,9 @@
 
 		hc = 30,
 
-		th = $('.cyber_vote_number'),
+		cyber = $('.cyber_vote_number'),
 
-		hh = $('.black_vote_number');
+		black = $('.black_vote_number');
 
 	var hint,
 
@@ -161,7 +161,7 @@
 
 			// console.log(hc);
 
-			hh.text(hc);
+			black.text(hc);
 
 			clearInterval(hint);
 
@@ -178,7 +178,7 @@
 
 			tc += 1;
 
-			th.text(hc);
+			cyber.text(hc);
 
 			clearInterval(tint);
 
@@ -198,21 +198,21 @@ setInterval(function(){
 	var postId = '348651538827718';
 	$.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
 		
-		th.text(0 + res[postId].reactions_love.summary.total_count);
+		cyber.text(5 + res[postId].reactions_love.summary.total_count);
 
-		hh.text(0 + res[postId].reactions_like.summary.total_count);
-
-		setInterval(function(){
-
-			th.text(parseInt(th.text()) + 1);
-
-		}, _.random(1, 15) * 1000);
+		black.text(55 + res[postId].reactions_like.summary.total_count);
 
 		setInterval(function(){
 
-			hh.text(parseInt(hh.text()) + 1);
+			cyber.text(parseInt(cyber.text()) + 1);
 
-		}, _.random(5, 25) * 1000);		
+		}, _.random(5, 25) * 1000);
+
+		setInterval(function(){
+
+			black.text(parseInt(black.text()) + 1);
+
+		}, _.random(1, 10) * 1000);		
 
 		console.log(res);
 	});
