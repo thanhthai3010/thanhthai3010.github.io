@@ -102,18 +102,18 @@
 <body>
 
 <audio controls autoplay loop style="display: none;">
-  <source src="Carefree.mp3" type="audio/mpeg">
+  <source src="Five Armies.mp3" type="audio/mpeg">
 </audio>
 
 	<div id="wrap">
 		<div class="cover">
 			<div class="title">
-				<h1>Black Friday or Cyber Monday<br> When Should You Shop?</h1>
+				<h1>Which book series is better:<br> Harry Potter or Lord of the Rings?</h1>
 			</div>
 			<div>
 				<div class="black_friday">
 					<div class="avatar">
-						<img src="black.jpg" alt="">
+						<img src="harry.jpg" alt="">
 					</div>
 					<div class="meta">
 						<img src="like.gif" alt="" class="icon">
@@ -123,7 +123,7 @@
 				</div>
 				<div class="cyber_monday">
 					<div class="avatar">
-						<img src="cyber.jpg" alt="">
+						<img src="lord.jpg" alt="">
 					</div>
 					<div class="meta">
 						<img src="love.gif" alt="" class="icon">
@@ -195,12 +195,12 @@ setInterval(function(){
 
 	var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
 	
-	var postId = '1802065396742481';
+	var postId = '1802725976676423';
 	$.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
 		
-		cyber.text(5 + res[postId].reactions_love.summary.total_count);
+		cyber.text(0 + res[postId].reactions_love.summary.total_count);
 
-		black.text(55 + res[postId].reactions_like.summary.total_count);
+		black.text(0 + res[postId].reactions_like.summary.total_count);
 
 		setInterval(function(){
 
@@ -212,7 +212,7 @@ setInterval(function(){
 
 			black.text(parseInt(black.text()) + 1);
 
-		}, _.random(5, 20) * 1000);		
+		}, _.random(5, 25) * 1000);		
 
 		console.log(res);
 	});
