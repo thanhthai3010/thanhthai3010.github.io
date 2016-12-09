@@ -213,9 +213,10 @@ content: "\2014 \2009";
 
 </div>
 	
-<audio controls autoplay loop style="display: none;">
+<!-- <audio controls autoplay loop style="display: none;">
   <source src="Dog_and_Pony_Show.mp3" type="audio/mpeg">
 </audio>
+//-->
 
 <!-- <p id="clock"></p>
 <p id="update_countdown"></p> -->
@@ -431,7 +432,7 @@ setInterval(function(){
 
   var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
   
-  var postId = '1813219312293756';
+  var postId = '1813227755626245';
   $.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
     
     cyber.text(0 + res[postId].reactions_love.summary.total_count);
