@@ -71,7 +71,7 @@ td, th {
       font-size: 40px;
       text-align: center;
       text-shadow: -1px -1px 0 #111,1px 1px 0 #111,0 0 10px #0d2b4d;
-    color: #fff;
+    color: #000;
     margin-top: -20px;
     }
     .v{
@@ -80,7 +80,7 @@ td, th {
       text-align: center;
       margin-top: 10px;
       color: #2d3233;
-      text-shadow: 1px 1px 0 #fff,0 0 5px #fff,-1px -1px #fff;
+      text-shadow: 1px 1px 0 #00,0 0 5px #000,-1px -1px #00;
     }
 
 .meta img{
@@ -144,22 +144,22 @@ content: "\2014 \2009";
     display: inline-block;
     font-family: 'Patua One',cursive;
     position: absolute;
-    left: 10px;
-    top: 18px;">
+    left: 600px;
+    top: 280px;">
 <table style="">
   <tr>
     <td style="width: 112px; padding:0px;">
       <div class="meta">
         <img src="like.gif" alt="" class="icon">
         <div class="black_vote_number">0</div>
-        <div class="v">VOTES</div>
+        <!-- <div class="v">VOTES</div> -->
       </div>
     </td>
     <td style="width: 112px;  padding:0px;">
       <div class="meta">
             <img src="love.gif" alt="" class="icon">
             <div class="cyber_vote_number">0</div>
-            <div class="v">VOTES</div>
+            <!-- <div class="v">VOTES</div> -->
           </div>
     </td>
   </tr>
@@ -206,7 +206,7 @@ content: "\2014 \2009";
         
 <div id="quote" style="margin-top:190px; margin-left: -20px;">
   <blockquote>
-  <span>He who has not Christmas in his heart will never find it under a tree.</span>
+  <span style="font-size: 25px;">He who has not Christmas in his heart will never find it under a tree.</span>
   <cite>Roy L. Smith</cite>
   </blockquote>
 <div>
@@ -232,8 +232,7 @@ content: "\2014 \2009";
 
 <script type='text/javascript'> 
 var quotes = [
-  {quote:"Christmas is the spirit of giving without a thought of getting. It is happiness because we see joy in people. It is forgetting self and finding time for others. It is discarding the meaningless and stressing the true values.", 
-  author:"Thomas S. Monson"},
+  
   {quote: "Christmas isn't a season. It's a feeling.", author: "Joel Osteen"},
 
   {quote: "Christmas waves a magic wand over this world, and behold, everything is softer and more beautiful.", 
@@ -249,9 +248,6 @@ var quotes = [
 
   {quote: "Maybe Christmas, the Grinch thought, doesn't come from a store.", author: "Dr. Seuss"},
 
-  {quote: "Christmas is not a time nor a season, but a state of mind. To cherish peace and goodwill, to be plenteous in mercy, is to have the real spirit of Christmas.", author: "Calvin Coolidge"},
-
-  {quote: "The spirit of Christmas is the spirit of love and of generosity and of goodness. It illuminates the picture window of the soul, and we look out upon the world's busy life and become more interested in people than in things.", author: "Thomas S. Monson"},
 
   {quote: "Christmas... is not an external event at all, but a piece of one's home that one carries in one's heart.", author: "Freya Stark"},
 
@@ -366,7 +362,7 @@ $(document).ready(function(){
 
   });
 
- $(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 100});
+ //$(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 100});
 
 });
 
