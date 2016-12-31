@@ -1,457 +1,305 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Beautiful Christmas Santa Snow Falling Greetings with html5 css3 and jquery</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/animate.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery-latest.min.js"></script>
-<script src='js/snowfall.jquery.js'></script>
-<script src='js/jquery.countdown.min.js'></script>
-
-
-<style>
-
-div {
-  margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-  h1 {
-      font-size: 50px;
-      color: #fff;
-      text-shadow: #111 0 0 10px;
-      font-family: 'Patua One',cursive;
-    letter-spacing: .7px
-  }
-
-.countdown_section {
-    text-align: center;
-    
-    font-size: 30px;
-    color: #2d3233;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 #fff,0 0 5px #fff,-1px -1px #fff;
-    margin-top: 6px;
-    font-family: 'Patua One',cursive
-}
-
-.countdown_amount {
-    display: block;
-    font-size: 80px;
-    width: 100%;
-    text-shadow: -1px -1px 0 #111,1px 1px 0 #111,0 0 10px #0d2b4d;
-    color: #fff;
-    line-height: 30px;
-    font-family: 'Patua One',cursive
-}
-
-table {
-    width: auto;
-    display: table-cell;
-}
-
-td, th {
-    border: 0px solid #dddddd;
-    padding: 30px;
-    text-align: center;
-}
-
-#header {
-  height: 400px;
-}
-
-.cyber_vote_number, .black_vote_number{
-      width: 100%;
-      display: block;
-      font-size: 40px;
-      text-align: center;
-      text-shadow: -1px -1px 0 #111,1px 1px 0 #111,0 0 10px #0d2b4d;
-    color: #000;
-    margin-top: -20px;
-    }
-    .v{
-      text-align: center;
-      font-size: 16px;
-      text-align: center;
-      margin-top: 10px;
-      color: #2d3233;
-      text-shadow: 1px 1px 0 #00,0 0 5px #000,-1px -1px #00;
-    }
-
-.meta img{
-      display: block;
-      width: 60px;
-      height: 60px;
-      margin: 20px auto;
-    }
-    .votes{
-      text-align: center;
-      color: #fff;
-      font-weight: 30px;
-      display: block;
-      width: 100%;
-    }
-
-blockquote {
-  font-family: Georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-  width: 500px;
-  margin: 0.25em 0;
-  padding: 0.25em 40px;
-  line-height: 1.45;
-  position: relative;
-  color: #383838;
-}
-
-blockquote:before {
-  display: block;
-  content: "\201C";
-  font-size: 80px;
-  position: absolute;
-  left: -20px;
-  top: -20px;
-  color: #7a7a7a;
-}
-
-blockquote cite {
-color: #999999;
-font-size: 14px;
-display: block;
-margin-top: 5px;
-}
- 
-blockquote cite:before {
-content: "\2014 \2009";
-}
-
-</style>
-
-</head>
-
-<body>
-</div>
-<div id="header">
-
-<h1 class="glow">Christmas Countdown</h1>
-
-<div style="text-align: center;
-    display: inline-block;
-    font-family: 'Patua One',cursive;
-    position: absolute;
-    left: 600px;
-    top: 280px;">
-<table style="">
-  <tr>
-    <td style="width: 112px; padding:0px;">
-      <div class="meta">
-        <img src="like.gif" alt="" class="icon">
-        <div class="black_vote_number">0</div>
-        <!-- <div class="v">VOTES</div> -->
-      </div>
-    </td>
-    <td style="width: 112px;  padding:0px;">
-      <div class="meta">
-            <img src="love.gif" alt="" class="icon">
-            <div class="cyber_vote_number">0</div>
-            <!-- <div class="v">VOTES</div> -->
-          </div>
-    </td>
-  </tr>
-</table>
-</div>
-
-<div style="text-align: center;
-    display: inline-block;
-    margin-top: -10px;"
-    class="update_countdown">
-
-<table>
-  <tr>
-    <td>
-      <span class="countdown_section">
-        <span class="countdown_amount" id="date">0</span>
-        <br>Days
-      </span>
-    </td>
-    <td>
-      <span class="countdown_section">
-        <span class="countdown_amount" id="hour">0</span>
-        <br>Hour
-      </span>
-    </td>
-    <td>
-      <span class="countdown_section">
-        <span class="countdown_amount" id="minute">0</span>
-        <br>Minutes
-      </span>
-    </td>
-    <td>
-      <span class="countdown_section">
-        <span class="countdown_amount" id="second">0</span>
-        <br>Seconds
-      </span>
-    </td>
-  </tr>
-</table>
-
-
-</div>
-
-        
-<div id="quote" style="margin-top:190px; margin-left: -20px;">
-  <blockquote>
-  <span style="font-size: 25px;">He who has not Christmas in his heart will never find it under a tree.</span>
-  <cite>Roy L. Smith</cite>
-  </blockquote>
-<div>
-
-</div>
-	
-<audio controls autoplay loop style="display: none;">
-  <source src="Holiday.mp3" type="audio/mpeg">
-</audio>
-
-
-<!-- <p id="clock"></p>
-<p id="update_countdown"></p> -->
-
-
-<div class="countdown">
-  <span id="clock"></span>
-</div>
-
-</body>
-
-
-
-<script type='text/javascript'> 
-var quotes = [
-  
-  {quote: "Christmas isn't a season. It's a feeling.", author: "Joel Osteen"},
-
-  {quote: "Christmas waves a magic wand over this world, and behold, everything is softer and more beautiful.", 
-  author: "Norman Vincent Peale"},
-
-  {quote: "He who has not Christmas in his heart will never find it under a tree.", author: "Roy L. Smith"},
-
-  {quote: "Christmas is a season not only of rejoicing but of reflection.", author: "Winston Churchill"},
-
-  {quote: "Christmas is the day that holds all time together.", author: "Alexander Smith"},
-
-  {quote: "And know that I am with you always; yes, to the end of time.", author: "Jesus Christ"},
-
-  {quote: "Maybe Christmas, the Grinch thought, doesn't come from a store.", author: "Dr. Seuss"},
-
-
-  {quote: "Christmas... is not an external event at all, but a piece of one's home that one carries in one's heart.", author: "Freya Stark"},
-
-
-  {quote: "Christmas, my child, is love in action. Every time we love, every time we give, it's Christmas.", author: "Dale Evans"},
-]
-
-
-var myArray = [
-'bounce',
-'flash',
-'pulse',
-'rubberBand',
-'shake',
-'headShake',
-'swing',
-'tada',
-'wobble',
-'jello',
-'bounceIn',
-'bounceInDown',
-'bounceInLeft',
-'bounceOut',
-'bounceOutLeft',
-'fadeIn',
-'fadeInDown',
-'fadeInLeft',
-'fadeInLeftBig',
-'fadeInRight',
-'fadeInUp',
-'fadeOut',
-'fadeOutDown',
-'fadeOutLeft',
-'fadeOutUp',
-'flipInX',
-'flipInY',
-'flipOutX',
-'flipOutY',
-'lightSpeedIn',
-'rotateIn',
-'rotateInDownLeft',
-'rotateOut',
-'rotateOutDownLeft',
-'rotateOutUpLeft',
-'hinge',
-'rollIn',
-'rollOut',
-'zoomIn',
-'zoomInDown',
-'zoomInLeft',
-'zoomInRight',
-'zoomOut',
-'zoomOutDown',
-'zoomOutLeft',
-'slideInDown',
-'slideInLeft',
-'slideInUp',
-'slideOutDown',
-'slideOutLeft',
-'slideOutUp',
-];
-
-$(document).ready(function(){
-	$.fn.extend({
-      animateCss: function (animationName) {
-          var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-          this.addClass('animated ' + animationName).one(animationEnd, function() {
-              $(this).removeClass('animated ' + animationName);
-          });
-      }
-  });
-
-
-  setInterval(function(){ 
-    var randQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    $('#quote blockquote span').text(randQuote.quote);
-    $('#quote blockquote cite').text(randQuote.author);
-
-   }, 15000);
-
-  $('#clock').countdown('2016/12/25 17:00:00')
-  .on('update.countdown', function(event) {
-    
-    var old_day = parseInt($('#date').text());
-    if (old_day != event.offset.totalDays) {
-      var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
-      $('#date').text(event.offset.totalDays).animateCss(randAnimaie);
-    }
-
-    var old_hour = parseInt($('#hour').text());
-    if (old_hour != event.offset.hours) {
-      var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
-      $('#hour').text(event.offset.hours).animateCss(randAnimaie);
-    }
-
-    var old_minute = parseInt($('#minute').text());
-    if (old_minute != event.offset.minutes) {
-      var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
-      $('#minute').text(event.offset.minutes).animateCss(randAnimaie);
-    }
-
-    var old_second = parseInt($('#second').text());
-    if (old_second != event.offset.seconds) {
-      var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
-      $('#second').text(event.offset.seconds).animateCss(randAnimaie);
-    }
-
-  })
-  .on('finish.countdown', function(event) {
-    $(this).html('This offer has expired!')
-      .parent().addClass('disabled');
-
-  });
-
- $(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 100});
-
-});
-
- </script>
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
-<script>
-
-"use strict";
-
-  var tc = 12,
-
-    hc = 30,
-
-    cyber = $('.cyber_vote_number'),
-
-    black = $('.black_vote_number');
-
-  var hint,
-
-    tint;
-
-  function black_friday(){
-
-    hint = setInterval(function(){
-
-      hc += 1;
-
-      // console.log(hc);
-
-      black.text(hc);
-
-      clearInterval(hint);
-
-      black_friday();
-
-    }, _.random(1, 15) * 1000);
-  }
-
-  function cyber_monday(){
-
-    tint = setInterval(function(){
-
-      // console.log(tc);
-
-      tc += 1;
-
-      cyber.text(hc);
-
-      clearInterval(tint);
-
-      cyber_monday();
-
-    }, _.random(1, 15) * 1000);
-  } 
-
-  // cyber_monday();
-
-  // black_friday();
-
-setInterval(function(){
-
-  var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
-  
-  var postId = '1820879854861035';
-  $.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
-    
-    cyber.text(0 + res[postId].reactions_love.summary.total_count);
-
-    black.text(0 + res[postId].reactions_like.summary.total_count);
-
-    setInterval(function(){
-
-      cyber.text(parseInt(cyber.text()) + 1);
-
-    }, _.random(5, 25) * 1000);
-
-    setInterval(function(){
-
-      black.text(parseInt(black.text()) + 1);
-
-    }, _.random(5, 25) * 1000);   
-
-    console.log(res);
-  });
-}, 10000);
-</script>
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+
+        <style type="text/css">
+            body {
+                margin: 0 auto;
+                text-align: center;
+                background: #002639;
+                font-family: 'Roboto', serif; 
+                font-size: 16px;                
+                color: #666;
+                background: url(bg.jpg) no-repeat top center #000;
+            }
+
+            .countdown_section {
+                text-align: center;
+                
+                font-size: 80px;
+                color: #2d3233;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 0 #fff,0 0 5px #fff,-1px -1px #fff;
+                margin-top: 6px;
+                /*font-family: 'Patua One',cursive*/
+            }
+
+            .countdown_amount {
+                display: block;
+                font-size: 120px;
+                width: 100%;
+                /*text-shadow: -1px -1px 0 #111,1px 1px 0 #111,0 0 10px #0d2b4d;*/
+                color: #fff;
+                line-height: 30px;
+                /*font-family: 'Patua One',cursive*/
+            }
+
+            table {
+                width: auto;
+                display: table-cell;
+            }
+
+            td, th {
+                border: 0px solid #dddddd;
+                padding: 30px;
+                text-align: center;
+            }
+
+
+            .time {
+                font-size:40px;
+            }
+
+            .meta img{
+              display: block;
+              width: 90px;
+              height: 90px;
+              margin: 20px auto;
+            }
+            .black_vote_number{
+              text-align: center;
+              color: #fff;
+              font-weight: 30px;
+              display: block;
+              width: 100%;
+              font-size: 40px;
+            }
+
+            .cyber_vote_number{
+              text-align: center;
+              color: #fff;
+              font-weight: 30px;
+              display: block;
+              width: 100%;
+              font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <h1 style="font-size: 85px;
+                    color: #ebb600;
+                    text-transform: uppercase;
+                    text-shadow: #111 0px 0px 10px" >Countdown to 2017</h1>
+
+        <div style="text-align: center;
+            display: inline-block;
+            margin-top: -10px;"
+            <div class="update_countdown">
+
+                <table>
+                  <tr>
+                    <td>
+                      <span class="countdown_section">
+                        <span class="countdown_amount" id="date">0</span>
+                        <span class="time">Days</span>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="countdown_section">
+                        <span class="countdown_amount" id="hour">0</span>
+                        <span class="time">Hours</span>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="countdown_section">
+                        <span class="countdown_amount" id="minute">0</span>
+                        <span class="time">Minutes</span>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="countdown_section">
+                        <span class="countdown_amount" id="second">0</span>
+                        <span class="time">Seconds</span>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+
+        </div>
+
+        <div style="text-align: center;
+            display: inline-block;
+            position: absolute;
+            left: 600px;
+            top: 380px;">
+        <table style="">
+          <tr>
+            <td style="width: 112px; padding:0px;">
+              <div class="meta">
+                <img src="like.gif" alt="" class="icon">
+                <div class="black_vote_number">0</div>
+                <!-- <div class="v">VOTES</div> -->
+              </div>
+            </td>
+            <td style="width: 112px;  padding:0px;">
+              <div class="meta">
+                    <img src="love.gif" alt="" class="icon">
+                    <div class="cyber_vote_number">0</div>
+                    <!-- <div class="v">VOTES</div> -->
+                  </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+
+
+        <audio controls autoplay loop style="display: none;">
+          <source src="hapy_new_year.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <div class="countdown">
+          <span id="clock"></span>
+        </div>
 
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src='http://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js'></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            
+              $('#clock').countdown('2017/01/01 13:00:00')
+              .on('update.countdown', function(event) {
+                
+                var old_day = parseInt($('#date').text());
+                if (old_day != event.offset.totalDays) {
+                  // var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
+                  // $('#date').text(event.offset.totalDays).animateCss(randAnimaie);
+                  $('#date').text(event.offset.totalDays);
+                }
 
+                var old_hour = parseInt($('#hour').text());
+                if (old_hour != event.offset.hours) {
+                  // var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
+                  // $('#hour').text(event.offset.hours).animateCss(randAnimaie);
+                    $('#hour').text(event.offset.hours);
+                }
 
+                var old_minute = parseInt($('#minute').text());
+                if (old_minute != event.offset.minutes) {
+                  // var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
+                  // $('#minute').text(event.offset.minutes).animateCss(randAnimaie);
+                    $('#minute').text(event.offset.minutes);
+
+                }
+
+                var old_second = parseInt($('#second').text());
+                if (old_second != event.offset.seconds) {
+                  // var randAnimaie = myArray[Math.floor(Math.random() * myArray.length)];
+                  // $('#second').text(event.offset.seconds).animateCss(randAnimaie);
+                  $('#second').text(event.offset.seconds);
+                }
+
+              })
+              .on('finish.countdown', function(event) {
+                $(this).html('This offer has expired!')
+                  .parent().addClass('disabled');
+
+              });
+
+
+          var tc = 12,
+
+            hc = 30,
+
+            cyber = $('.cyber_vote_number'),
+
+            black = $('.black_vote_number');
+
+          var hint,
+
+            tint;
+
+          function black_friday(){
+
+            hint = setInterval(function(){
+
+              hc += 1;
+
+              // console.log(hc);
+
+              black.text(hc);
+
+              clearInterval(hint);
+
+              black_friday();
+
+            }, _.random(1, 15) * 1000);
+          }
+
+          function cyber_monday(){
+
+            tint = setInterval(function(){
+
+              // console.log(tc);
+
+              tc += 1;
+
+              cyber.text(hc);
+
+              clearInterval(tint);
+
+              cyber_monday();
+
+            }, _.random(1, 15) * 1000);
+          } 
+
+          setInterval(function(){
+
+              var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
+              
+              var postId = '1820879854861035';
+              
+
+              $.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
+                
+                cyber.text(0 + res[postId].reactions_love.summary.total_count);
+
+                black.text(0 + res[postId].reactions_like.summary.total_count);
+
+                setInterval(function(){
+
+                  cyber.text(parseInt(cyber.text()) + 1);
+
+                }, _.random(5, 25) * 1000);
+
+                setInterval(function(){
+
+                  black.text(parseInt(black.text()) + 1);
+
+                }, _.random(5, 25) * 1000);   
+
+                console.log(res);
+              });
+            }, 10000); 
+
+
+        </script>
+
+
+    </body>
 </html>

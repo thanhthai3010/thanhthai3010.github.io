@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Elections 2016</title>
+	<style>
+		html {
+		  box-sizing: border-box;
+		}
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+		body{
+			margin: 0;
+		}
+		#wrap{
+			position: relative;
+			margin: 0px auto;
+			width: 1280px;
+			height: 720px;
+		}
+		.cover{
+			padding-top: 20px;
+			padding-right: 200px;
+			padding-bottom: 20px;
+			padding-left: 80px;
+			position: absolute;
+			width: 1280px;
+			height: 720px;
+			top: 0;
+			left: 0;
+			z-index: 10;
+		}
+		h1{
+			font-size: 42px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff;
+			font-family: "Helvetica Neue", Helvetica, sans-serif;
+			margin: 0 0 25px 0;
+		}
+		.blur{
+		background-color: gray;
+		opacity: .8;
+		  -webkit-filter: blur(5px);
+		  -moz-filter: blur(5px);
+		  -o-filter: blur(5px);
+		  -ms-filter: blur(5px);
+		  filter: blur(5px);
+		}
+		.title{
+			background: url('title-bg.png') top left no-repeat;
+		}
+		.avatar img{
+			display: block;
+			border-radius: 50%;
+			width: 350px;
+			height: 350px;
+			margin: 0 auto;
+		}
+		.black_friday, .cyber_monday{
+			display: inline-block;
+			width: 45%;
+			//background: url(blur.png) top left no-repeat;
+			padding: 15px 0;
+		}
+		.cyber_monday{
+			margin-left: 9%;
+		}
+		.meta img{
+			display: block;
+			width: 60px;
+			height: 60px;
+			margin: 20px auto;
+		}
+		.votes{
+			text-align: center;
+			color: #fff;
+			font-weight: 30px;
+			display: block;
+			width: 100%;
+		}	
+		.cyber_vote_number, .black_vote_number{
+			width: 100%;
+			display: block;
+			color: #fff;
+			font-size: 40px;
+			text-align: center;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		}
+		.v{
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+			text-align: center;
+			margin-top: 10px;
+			font-family: Verdana, Geneva, sans-serif;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+<audio controls autoplay loop style="display: none;">
+  <source src="Curse of the Scarab.mp3" type="audio/mpeg">
+</audio>
+
+	<div id="wrap">
+		<div class="cover">
+			<div class="title">
+				<h1>Which book series is better:<br> Harry Potter or Lord of the Rings?</h1>
+			</div>
+			<div>
+				<div class="black_friday">
+					<div class="avatar">
+						<img src="harry.jpg" alt="">
+					</div>
+					<div class="meta">
+						<img src="like.gif" alt="" class="icon">
+						<div class="black_vote_number">0</div>
+						<div class="v">VOTES</div>
+					</div>
+				</div>
+				<div class="cyber_monday">
+					<div class="avatar">
+						<img src="lord.jpg" alt="">
+					</div>
+					<div class="meta">
+						<img src="love.gif" alt="" class="icon">
+						<div class="cyber_vote_number">0</div>
+						<div class="v">VOTES</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<video src="video.mp4" autoplay="true" loop="true"></video>
+	</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.6/lodash.min.js"></script>
+<script>
+
+"use strict";
+
+	var tc = 12,
+
+		hc = 30,
+
+		cyber = $('.cyber_vote_number'),
+
+		black = $('.black_vote_number');
+
+	var hint,
+
+		tint;
+
+	function black_friday(){
+
+		hint = setInterval(function(){
+
+			hc += 1;
+
+			// console.log(hc);
+
+			black.text(hc);
+
+			clearInterval(hint);
+
+			black_friday();
+
+		}, _.random(1, 15) * 1000);
+	}
+
+	function cyber_monday(){
+
+		tint = setInterval(function(){
+
+			// console.log(tc);
+
+			tc += 1;
+
+			cyber.text(hc);
+
+			clearInterval(tint);
+
+			cyber_monday();
+
+		}, _.random(1, 15) * 1000);
+	}	
+
+	// cyber_monday();
+
+	// black_friday();
+
+setInterval(function(){
+
+	var token = 'EAAJbNXsfn4MBALv9SppE27g9OpWLCmcmGggZAQZB07dUZCnhSO7CRMFcKTjXUG40mifwAfAw57FC1DYNiKwZBFWgysWEQMfA6ZBDKvfnUxhSijZCdY36vjpj3rpdXfCeeyw2aZBiO5g1qa6rZCC1IozXopUsTnDxsQoZD';
+	
+	var postId = '1802756743340013';
+	$.getJSON('https://graph.facebook.com/v2.8/?ids=' + postId +'&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)&access_token=' + token,function(res){
+		
+		cyber.text(0 + res[postId].reactions_love.summary.total_count);
+
+		black.text(0 + res[postId].reactions_like.summary.total_count);
+
+		setInterval(function(){
+
+			cyber.text(parseInt(cyber.text()) + 1);
+
+		}, _.random(5, 25) * 1000);
+
+		setInterval(function(){
+
+			black.text(parseInt(black.text()) + 1);
+
+		}, _.random(5, 25) * 1000);		
+
+		console.log(res);
+	});
+}, 10000);
+</script>
+
+</body>
+</html>
